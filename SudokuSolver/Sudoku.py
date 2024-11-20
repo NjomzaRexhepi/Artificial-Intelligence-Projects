@@ -54,3 +54,61 @@ def main():
                 print("Ju lutem zgjidhni një numër të vlefshëm (1, 2 ose 3).")
         except ValueError:
             print("Ju lutem shkruani vetëm numra!")
+            
+            
+            
+        easy_grid = [
+        [5, 3, 0, 0, 7, 0, 0, 0, 0],
+        [6, 0, 0, 1, 9, 5, 0, 0, 0],
+        [0, 9, 8, 0, 0, 0, 0, 6, 0],
+        [8, 0, 0, 0, 6, 0, 0, 0, 3],
+        [4, 0, 0, 8, 0, 3, 0, 0, 1],
+        [7, 0, 0, 0, 2, 0, 0, 0, 6],
+        [0, 6, 0, 0, 0, 0, 2, 8, 0],
+        [0, 0, 0, 4, 1, 9, 0, 0, 5],
+        [0, 0, 0, 0, 8, 0, 0, 7, 9]
+    ]
+
+    medium_grid = [
+        [0, 0, 0, 0, 0, 0, 0, 1, 2],
+        [0, 0, 0, 3, 0, 5, 0, 0, 0],
+        [0, 0, 1, 0, 2, 0, 4, 0, 0],
+        [0, 3, 0, 0, 0, 0, 0, 9, 0],
+        [0, 0, 0, 7, 0, 8, 0, 0, 0],
+        [0, 2, 0, 0, 0, 0, 0, 6, 0],
+        [0, 0, 5, 0, 9, 0, 8, 0, 0],
+        [0, 0, 0, 2, 0, 6, 0, 0, 0],
+        [9, 4, 0, 0, 0, 0, 0, 0, 0]
+    ]
+
+    hard_grid = [
+        [0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 3, 0, 0, 0, 0, 1],
+        [0, 0, 0, 0, 0, 0, 0, 5, 0],
+        [0, 0, 8, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 7, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 6],
+        [0, 0, 0, 0, 0, 0, 2, 0, 0],
+        [0, 0, 0, 0, 8, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 7, 0]
+    ]
+
+    if level == 1:
+        grid = easy_grid
+    elif level == 2:
+        grid = medium_grid
+    else:
+        grid = hard_grid
+
+    print("\nSudoku i dhënë:")
+    print_sudoku(grid)
+
+    solution = bfs_backtracking_sudoku(grid)
+    if solution:
+        print("Zgjidhja e Sudoku:")
+        print_sudoku(solution)
+    else:
+        print("Nuk ka zgjidhje për këtë Sudoku.")
+
+if __name__ == "__main__":
+    main()
