@@ -1,73 +1,57 @@
 ﻿using System;
-using System.Linq;
 
 class LatinSquare
 {
     private int[,] square;
+    private bool[,] rowUsed, colUsed;
     private int n;
 
-    public LatinSquare(int n)
+    public LatinSquare(int size)
     {
-        this.n = n;
-        this.square = new int[n, n];
+        n = size;
+        square = new int[n, n];
+        rowUsed = new bool[n, n + 1];
+        colUsed = new bool[n, n + 1];
     }
 
-    public bool Solve()
+    public bool SolveSquare()
     {
-        for (int depth = 1; depth <= n * n; depth++)
-        {
-            if (IDDFS(0, depth))
-                return true;
-        }
-        return false;
+        return Backtrack(0, 0);
     }
 
-    private bool IDDFS(int index, int depthLimit)
+    private bool Backtrack(int row, int col)
     {
-        if (index == n * n)
-            return true; // Solved entire square.
+        if (row == n) return true; // Base case
 
-        if (depthLimit == 0)
-            return false; // Reached depth limit.
-
-        int row = index / n;
-        int col = index % n;
-
-        // Skip prefilled cells
-        if (square[row, col] != 0)
-            return IDDFS(index + 1, depthLimit - 1);
+        int nextRow = col == n - 1 ? row + 1 : row;
+        int nextCol = col == n - 1 ? 0 : col + 1;
 
         for (int num = 1; num <= n; num++)
         {
-            if (IsSafe(row, col, num))
+            if (!rowUsed[row, num] && !colUsed[col, num])
             {
-                square[row, col] = num; // Place number
-                if (IDDFS(index + 1, depthLimit - 1))
-                    return true; // Move to the next cell.
-                square[row, col] = 0; // Backtrack
+                square[row, col] = num;
+                rowUsed[row, num] = colUsed[col, num] = true;
+
+                if (Backtrack(nextRow, nextCol))
+                    return true;
+
+                square[row, col] = 0;
+                rowUsed[row, num] = colUsed[col, num] = false;
             }
         }
-        return false; // No valid number found at this depth.
-    }
 
-    private bool IsSafe(int row, int col, int num)
-    {
-        // Check row and column for the same number
-        for (int i = 0; i < n; i++)
-        {
-            if (square[row, i] == num || square[i, col] == num)
-                return false;
-        }
-        return true;
+        return false;
     }
 
     public void PrintSquare()
     {
+        Console.WriteLine("Latin Square:");
         for (int i = 0; i < n; i++)
         {
             for (int j = 0; j < n; j++)
             {
-                Console.Write($"{square[i, j]} ");
+                Console.Write($"{square[i, j],2} ");
             }
             Console.WriteLine();
         }
@@ -78,12 +62,18 @@ class Program
 {
     static void Main()
     {
-        int n = 4; // Order of the Latin Square
-        LatinSquare latinSquare = new LatinSquare(n);
-
-        if (latinSquare.Solve())
+        Console.Write("Enter the size of the Latin Square (n x n): ");
+        if (!int.TryParse(Console.ReadLine(), out int n) || n <= 0)
         {
-            Console.WriteLine("Latin Square Solved:");
+            Console.WriteLine("Invalid size. Please enter a positive integer.");
+            return;
+        }
+
+        var latinSquare = new LatinSquare(n);
+
+        Console.WriteLine($"Creating a {n}x{n} Latin Square...");
+        if (latinSquare.SolveSquare())
+        {
             latinSquare.PrintSquare();
         }
         else
