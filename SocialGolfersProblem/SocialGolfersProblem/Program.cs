@@ -8,18 +8,19 @@ namespace SocialGolfersProblem
 {
     public class Program
     {
-      
-            static void Main(string[] args)
-            {
-                int numPlayers = 32;   // Total players
-                int groupSize = 4;     // Players per group
 
-                var scheduler = new GolfScheduler(numPlayers, groupSize);
-                int maxWeeks = scheduler.CreateMaxSchedule();
+        static void Main(string[] args)
+        {
+            int numPlayers = 32;   
+            int groupSize = 4;     
+            int depthLimit = 10;   
 
-                Console.WriteLine($"Maximum weeks scheduled: {maxWeeks}");
-                scheduler.PrintSchedule();
-            }
-        
+            var scheduler = new GolfScheduler(numPlayers, groupSize);
+            int maxWeeks = scheduler.CreateMaxSchedule(depthLimit); 
+
+            Console.WriteLine($"Maximum weeks scheduled: {maxWeeks}");
+            scheduler.PrintSchedule();
+        }
+
     }
 }

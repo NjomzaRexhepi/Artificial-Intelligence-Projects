@@ -40,7 +40,7 @@ namespace SocialGolfersProblem
         //    }
         //    return weeks;
         //}
-        public int CreateMaxSchedule()
+        public int CreateMaxSchedule(int depthLimit)
         {
             int weeks = 0;
             bool foundNewSchedule;
@@ -52,32 +52,34 @@ namespace SocialGolfersProblem
                 for (int i = 0; i < numGroups; i++)
                     weekGroups.Add(new List<int>());
 
-                if (ScheduleWeek(weekGroups))
+                if (ScheduleWeek(weekGroups, depthLimit))
                 {
                     schedule.Add(weekGroups);
                     weeks++;
-                    foundNewSchedule = true; 
+                    foundNewSchedule = true;
                 }
             }
             while (foundNewSchedule);
 
             return weeks;
         }
-        private bool ScheduleWeek(List<List<int>> weekGroups)
+        private bool ScheduleWeek(List<List<int>> weekGroups, int depthLimit)
         {
             var availablePlayers = new List<int>();
             for (int i = 0; i < numPlayers; i++)
                 availablePlayers.Add(i);
 
-            return ScheduleGroup(0, availablePlayers, weekGroups);
+            return ScheduleGroup(0, availablePlayers, weekGroups, depthLimit, 0);
         }
 
-        private bool ScheduleGroup(int groupIndex, List<int> availablePlayers, List<List<int>> weekGroups)
+        private bool ScheduleGroup(int groupIndex, List<int> availablePlayers, List<List<int>> weekGroups, int depthLimit, int currentDepth)
         {
             if (groupIndex == numGroups)
-                return true; 
+                return true;
 
-           
+            if (currentDepth >= depthLimit)
+                return false; 
+
             return TryPlayers(availablePlayers, new List<int>(), groupSize, group =>
             {
                 if (IsValidGroup(group))
@@ -85,7 +87,7 @@ namespace SocialGolfersProblem
                     weekGroups[groupIndex] = group;
                     MarkPairs(group);
 
-                    if (ScheduleGroup(groupIndex + 1, availablePlayers, weekGroups))
+                    if (ScheduleGroup(groupIndex + 1, availablePlayers, weekGroups, depthLimit, currentDepth + 1))
                         return true;
 
                     UnmarkPairs(group);
