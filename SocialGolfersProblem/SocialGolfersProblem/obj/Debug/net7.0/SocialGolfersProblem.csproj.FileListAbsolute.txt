@@ -1,0 +1,14 @@
+C:\Users\HP\Desktop\SocialGolfersProblem\Artificial-Intelligence-Projects\SocialGolfersProblem\SocialGolfersProblem\bin\Debug\net7.0\SocialGolfersProblem.exe
+C:\Users\HP\Desktop\SocialGolfersProblem\Artificial-Intelligence-Projects\SocialGolfersProblem\SocialGolfersProblem\bin\Debug\net7.0\SocialGolfersProblem.deps.json
+C:\Users\HP\Desktop\SocialGolfersProblem\Artificial-Intelligence-Projects\SocialGolfersProblem\SocialGolfersProblem\bin\Debug\net7.0\SocialGolfersProblem.runtimeconfig.json
+C:\Users\HP\Desktop\SocialGolfersProblem\Artificial-Intelligence-Projects\SocialGolfersProblem\SocialGolfersProblem\bin\Debug\net7.0\SocialGolfersProblem.dll
+C:\Users\HP\Desktop\SocialGolfersProblem\Artificial-Intelligence-Projects\SocialGolfersProblem\SocialGolfersProblem\bin\Debug\net7.0\SocialGolfersProblem.pdb
+C:\Users\HP\Desktop\SocialGolfersProblem\Artificial-Intelligence-Projects\SocialGolfersProblem\SocialGolfersProblem\obj\Debug\net7.0\SocialGolfersProblem.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HP\Desktop\SocialGolfersProblem\Artificial-Intelligence-Projects\SocialGolfersProblem\SocialGolfersProblem\obj\Debug\net7.0\SocialGolfersProblem.AssemblyInfoInputs.cache
+C:\Users\HP\Desktop\SocialGolfersProblem\Artificial-Intelligence-Projects\SocialGolfersProblem\SocialGolfersProblem\obj\Debug\net7.0\SocialGolfersProblem.AssemblyInfo.cs
+C:\Users\HP\Desktop\SocialGolfersProblem\Artificial-Intelligence-Projects\SocialGolfersProblem\SocialGolfersProblem\obj\Debug\net7.0\SocialGolfersProblem.csproj.CoreCompileInputs.cache
+C:\Users\HP\Desktop\SocialGolfersProblem\Artificial-Intelligence-Projects\SocialGolfersProblem\SocialGolfersProblem\obj\Debug\net7.0\SocialGolfersProblem.dll
+C:\Users\HP\Desktop\SocialGolfersProblem\Artificial-Intelligence-Projects\SocialGolfersProblem\SocialGolfersProblem\obj\Debug\net7.0\refint\SocialGolfersProblem.dll
+C:\Users\HP\Desktop\SocialGolfersProblem\Artificial-Intelligence-Projects\SocialGolfersProblem\SocialGolfersProblem\obj\Debug\net7.0\SocialGolfersProblem.pdb
+C:\Users\HP\Desktop\SocialGolfersProblem\Artificial-Intelligence-Projects\SocialGolfersProblem\SocialGolfersProblem\obj\Debug\net7.0\SocialGolfersProblem.genruntimeconfig.cache
+C:\Users\HP\Desktop\SocialGolfersProblem\Artificial-Intelligence-Projects\SocialGolfersProblem\SocialGolfersProblem\obj\Debug\net7.0\ref\SocialGolfersProblem.dll
