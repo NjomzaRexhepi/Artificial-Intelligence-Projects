@@ -38,3 +38,19 @@ def bfs_backtracking_sudoku(grid):
                     queue.append((new_grid, next_row, next_col))
     
     return None 
+
+def main():
+    print("Zgjidhni nivelin e vështirësisë: ")
+    print("1. Lehtë")
+    print("2. Mesatar")
+    print("3. Vështirë")
+    
+    while True:
+        try:
+            level = int(input("Zgjedhja juaj (1/2/3): "))
+            if level in [1, 2, 3]:
+                break
+            else:
+                print("Ju lutem zgjidhni një numër të vlefshëm (1, 2 ose 3).")
+        except ValueError:
+            print("Ju lutem shkruani vetëm numra!")
