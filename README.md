@@ -21,11 +21,11 @@
    Requirement: Iterative Deepening Depth First Search (IDDFS) and Backtracking.
 
 
-## Latin Square
+# Latin Square
 
 Projekti Latin Square është një aplikacion i zhvilluar në gjuhën programuese C# që gjeneron dhe validon kuadrate latine (Latin Squares). Një kuadrat latin është një matricë n×n, ku secili numër shfaqet saktësisht një herë në çdo rresht dhe kolonë. Ky projekt ofron mundësinë që përdoruesit të japin si hyrje vlerën n dhe të ndërveprojnë me funksionalitetet e tij për të mësuar më shumë rreth këtij koncepti matematikor.
 
-# Karakteristikat
+## Karakteristikat
     1. Gjenerimi i Kuadrateve Latine
             Gjeneron automatikisht kuadrate latine valide të madhësisë n×n.
             Siguron që secili numër shfaqet vetëm një herë në çdo rresht dhe kolonë.
@@ -37,7 +37,7 @@ Projekti Latin Square është një aplikacion i zhvilluar në gjuhën programues
     4. Trajtimi i Gabimeve
             Jep mesazhe të sakta për raste kur hyrjet janë të pavlefshme ose kur matrica nuk përmbush rregullat e kuadratit latin.
 
-# Si Funksionon
+## Si Funksionon
     1. Gjenerimi i Kuadratit Latin
             Përdoruesi jep vlerën e n (p.sh. n=4).
             Sistemi gjeneron një kuadrat latin n×n me numra nga 1 deri në n, duke respektuar rregullat.
@@ -48,7 +48,7 @@ Projekti Latin Square është një aplikacion i zhvilluar në gjuhën programues
     3. Ndërveprimi me Përdoruesin
             Përdoruesi mund të zgjedhë mes opsioneve për të gjeneruar ose kontrolluar kuadratet latine.
 
-# Instruksionet për Përdorim
+## Instruksionet për Përdorim
 Kërkesat:
     Duhet të keni të instaluar një mjedis për zhvillimin e projekteve C# (p.sh. Visual Studio).
 
@@ -63,15 +63,20 @@ Përdorni Aplikacionin:
 Jepni vlerën n kur ju kërkohet.
 
 Shembull
+
 Hyrja:
+
 Vendosni madhësinë e kuadratit latin (n): 3
+
 Rezultati:
+
 Kuadrati Latin i Gjeneruar:
+```
 1 2 3
 3 1 2
 2 3 1
-
-# Mesazhe të Gabimeve
+```
+## Mesazhe të Gabimeve
 Hyrje e Pavlefshme:
 Nëse n është më i vogël se 2, shfaqet mesazhi:
 Gabim: Madhësia e kuadratit duhet të jetë të paktën 2.
