@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "YJGRqhGyDy12aStLAgaZ64Bqpn3gn0lcQQucSZCEmhC1ME66+/q6D6RjqExra6aS2sd3ZcyyLTnRXD4bzpwYIQ==",
+  "dgSpecHash": "PluI3V9RI3U=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Admin\\Source\\Repos\\Artificial-Intelligence-Projects\\LatinSquareProblem\\LatinSquareProblem.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\Kaltrina\\Documents\\GitHub\\Artificial-Intelligence-Projects\\LatinSquareProblem\\LatinSquareProblem.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Kaltrina\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.32\\microsoft.netcore.app.ref.6.0.32.nupkg.sha512",
+    "C:\\Users\\Kaltrina\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.32\\microsoft.windowsdesktop.app.ref.6.0.32.nupkg.sha512",
+    "C:\\Users\\Kaltrina\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.32\\microsoft.aspnetcore.app.ref.6.0.32.nupkg.sha512",
+    "C:\\Users\\Kaltrina\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.32\\microsoft.netcore.app.host.win-x64.6.0.32.nupkg.sha512"
+  ],
   "logs": []
 }
