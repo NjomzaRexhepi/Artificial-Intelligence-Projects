@@ -1,20 +1,15 @@
 {
   "version": 2,
-<<<<<<< HEAD
   "dgSpecHash": "zQVEBKP6i6gCAPEbUGBUvMKt6wa8RKvSdM7nOxkcTnBlRRotoSWe1NkULYCndTnsRrrXPfMlzmmMB3yemgEvMA==",
   "success": true,
   "projectFilePath": "C:\\Users\\Admin\\source\\repos\\Artificial-Intelligence-Projects\\LatinSquareProblem\\LatinSquareProblem.csproj",
   "expectedPackageFiles": [],
-=======
-  "dgSpecHash": "PluI3V9RI3U=",
-  "success": true,
-  "projectFilePath": "C:\\Users\\Kaltrina\\Documents\\GitHub\\Artificial-Intelligence-Projects\\LatinSquareProblem\\LatinSquareProblem.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\Kaltrina\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.32\\microsoft.netcore.app.ref.6.0.32.nupkg.sha512",
-    "C:\\Users\\Kaltrina\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.32\\microsoft.windowsdesktop.app.ref.6.0.32.nupkg.sha512",
-    "C:\\Users\\Kaltrina\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.32\\microsoft.aspnetcore.app.ref.6.0.32.nupkg.sha512",
-    "C:\\Users\\Kaltrina\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.32\\microsoft.netcore.app.host.win-x64.6.0.32.nupkg.sha512"
-  ],
->>>>>>> c4280cd0859c35f443d9aef35d7539a59b2a11f4
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file C:\\Users\\Admin\\source\\repos\\Artificial-Intelligence-Projects\\LatinSquareProblem\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }

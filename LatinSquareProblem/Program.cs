@@ -15,7 +15,6 @@ class LatinSquare
         colUsed = new bool[n, n + 1];
     }
 
-    // Solves the Latin square using backtracking and random placement
     public bool SolveSquare()
     {
         return Backtrack(0, 0);
@@ -42,9 +41,7 @@ class LatinSquare
         for (int i = candidates.Count - 1; i > 0; i--)
         {
             int j = rng.Next(i + 1);
-            int temp = candidates[i];
-            candidates[i] = candidates[j];
-            candidates[j] = temp;
+            (candidates[i], candidates[j]) = (candidates[j], candidates[i]);
         }
 
         // Try placing the numbers in a random order
@@ -84,11 +81,21 @@ class Program
 {
     static void Main()
     {
-        Console.Write("Enter the size of the Latin Square (n x n): ");
-        if (!int.TryParse(Console.ReadLine(), out int n) || n <= 0)
+        int n;
+
+        while (true)
         {
-            Console.WriteLine("Invalid size. Please enter a positive integer.");
-            return;
+            Console.Write("Enter the size of the Latin Square (n x n): ");
+            string input = Console.ReadLine();
+
+            if (!int.TryParse(input, out n) || n < 2)
+            {
+                Console.WriteLine("Invalid input. Please enter an integer greater than or equal to 2.");
+            }
+            else
+            {
+                break; // Valid input
+            }
         }
 
         var latinSquare = new LatinSquare(n);
