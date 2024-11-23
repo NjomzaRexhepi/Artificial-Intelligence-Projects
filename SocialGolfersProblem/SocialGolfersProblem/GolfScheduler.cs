@@ -12,7 +12,9 @@ namespace SocialGolfersProblem
         private int groupSize;       
         private int numGroups;      
         private List<List<List<int>>> schedule; 
-        private HashSet<(int, int)> playedTogether; 
+        private HashSet<(int, int)> playedTogether;
+        private Random rand;
+        DateTime starttime;
 
         public GolfScheduler(int numPlayers, int groupSize)
         {
@@ -21,55 +23,64 @@ namespace SocialGolfersProblem
             this.numGroups = numPlayers / groupSize;
             this.schedule = new List<List<List<int>>>();
             this.playedTogether = new HashSet<(int, int)>();
+            this.rand = new Random();
         }
 
-        //public int CreateMaxSchedule()
-        //{
-        //    int weeks = 0;
-        //    while (true)
-        //    {
-        //        var weekGroups = new List<List<int>>();
-        //        for (int i = 0; i < numGroups; i++)
-        //            weekGroups.Add(new List<int>());
-
-        //        if (!ScheduleWeek(weekGroups))
-        //            break; 
-
-        //        schedule.Add(weekGroups);
-        //        weeks++;
-        //    }
-        //    return weeks;
-        //}
         public int CreateMaxSchedule(int depthLimit)
         {
             int weeks = 0;
-            bool foundNewSchedule;
 
-            do
+            while (true)
             {
-                foundNewSchedule = false;
                 var weekGroups = new List<List<int>>();
                 for (int i = 0; i < numGroups; i++)
                     weekGroups.Add(new List<int>());
 
-                if (ScheduleWeek(weekGroups, depthLimit))
+                var availablePlayers = new List<int>();
+                for (int i = 0; i < numPlayers; i++)
+                    availablePlayers.Add(i);
+
+                int n = availablePlayers.Count;
+                //while (n > 1)
+                //{
+                //    n--;
+                //    int k = rand.Next(n + 1);
+                //    int value = availablePlayers[k];
+                //    availablePlayers[k] = availablePlayers[n];
+                //    availablePlayers[n] = value;
+                //}
+                // Shuffle using Fisher-Yates Shuffle
+                for (int i = availablePlayers.Count - 1; i > 0; i--)
                 {
-                    schedule.Add(weekGroups);
-                    weeks++;
-                    foundNewSchedule = true;
+                    int j = rand.Next(i + 1);
+                    (availablePlayers[i], availablePlayers[j]) = (availablePlayers[j], availablePlayers[i]);
+                }
+
+                Console.WriteLine($"Attempting to schedule week {weeks + 1}...");
+
+                if (!ScheduleWeek(weekGroups, availablePlayers, depthLimit))
+                {
+                    Console.WriteLine($"No more valid weeks can be scheduled after {weeks} weeks.");
+                    break; 
+                }
+
+                schedule.Add(weekGroups);
+                weeks++;
+
+                Console.WriteLine($"Week {weeks} Schedule:");
+                for (int i = 0; i < weekGroups.Count; i++)
+                {
+                    Console.WriteLine($"  Group {i + 1}: {string.Join(", ", weekGroups[i])}");
                 }
             }
-            while (foundNewSchedule);
 
             return weeks;
         }
-        private bool ScheduleWeek(List<List<int>> weekGroups, int depthLimit)
-        {
-            var availablePlayers = new List<int>();
-            for (int i = 0; i < numPlayers; i++)
-                availablePlayers.Add(i);
 
-            return ScheduleGroup(0, availablePlayers, weekGroups, depthLimit, 0);
+        private bool ScheduleWeek(List<List<int>> weekGroups, List<int> availablePlayers, int depthLimit)
+        {
+            this.starttime = DateTime.UtcNow;
+            return ScheduleGroup(0, new List<int>(availablePlayers), weekGroups, depthLimit, 0);
         }
 
         private bool ScheduleGroup(int groupIndex, List<int> availablePlayers, List<List<int>> weekGroups, int depthLimit, int currentDepth)
@@ -78,9 +89,16 @@ namespace SocialGolfersProblem
                 return true;
 
             if (currentDepth >= depthLimit)
-                return false; 
+                return false;
 
-            return TryPlayers(availablePlayers, new List<int>(), groupSize, group =>
+            if ((DateTime.UtcNow - this.starttime).TotalHours > 5)
+            {
+                return false;
+            }
+
+            var sortedPlayers = availablePlayers.OrderBy(player => playedTogether.Count(pair => pair.Item1 == player || pair.Item2 == player)).ToList();
+
+            return TryPlayers(sortedPlayers, new List<int>(), groupSize, group =>
             {
                 if (IsValidGroup(group))
                 {
@@ -95,6 +113,7 @@ namespace SocialGolfersProblem
                 return false;
             });
         }
+     
 
         private bool TryPlayers(List<int> players, List<int> currentGroup, int remaining, Func<List<int>, bool> callback)
         {
@@ -111,21 +130,18 @@ namespace SocialGolfersProblem
                     return true;
 
                 currentGroup.RemoveAt(currentGroup.Count - 1);
-                players.Insert(i, player);
+                players.Insert(i, player); 
             }
             return false;
         }
 
         private bool IsValidGroup(List<int> group)
         {
-            foreach (var player1 in group)
+            for (int i = 0; i < group.Count; i++)
             {
-                foreach (var player2 in group)
+                for (int j = i + 1; j < group.Count; j++)
                 {
-                    if (player1 >= player2)
-                        continue;
-
-                    if (playedTogether.Contains((player1, player2)))
+                    if (playedTogether.Contains((Math.Min(group[i], group[j]), Math.Max(group[i], group[j]))))
                         return false;
                 }
             }
@@ -134,24 +150,22 @@ namespace SocialGolfersProblem
 
         private void MarkPairs(List<int> group)
         {
-            foreach (var player1 in group)
+            for (int i = 0; i < group.Count; i++)
             {
-                foreach (var player2 in group)
+                for (int j = i + 1; j < group.Count; j++)
                 {
-                    if (player1 < player2)
-                        playedTogether.Add((player1, player2));
+                    playedTogether.Add((Math.Min(group[i], group[j]), Math.Max(group[i], group[j])));
                 }
             }
         }
 
         private void UnmarkPairs(List<int> group)
         {
-            foreach (var player1 in group)
+            for (int i = 0; i < group.Count; i++)
             {
-                foreach (var player2 in group)
+                for (int j = i + 1; j < group.Count; j++)
                 {
-                    if (player1 < player2)
-                        playedTogether.Remove((player1, player2));
+                    playedTogether.Remove((Math.Min(group[i], group[j]), Math.Max(group[i], group[j])));
                 }
             }
         }
