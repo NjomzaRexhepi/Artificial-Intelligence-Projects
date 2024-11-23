@@ -1,0 +1,15 @@
+C:\Users\Kaltrina\Documents\GitHub\Artificial-Intelligence-Projects\SudokuProblem\bin\Debug\net9.0\SudokuProblem.exe
+C:\Users\Kaltrina\Documents\GitHub\Artificial-Intelligence-Projects\SudokuProblem\bin\Debug\net9.0\SudokuProblem.deps.json
+C:\Users\Kaltrina\Documents\GitHub\Artificial-Intelligence-Projects\SudokuProblem\bin\Debug\net9.0\SudokuProblem.runtimeconfig.json
+C:\Users\Kaltrina\Documents\GitHub\Artificial-Intelligence-Projects\SudokuProblem\bin\Debug\net9.0\SudokuProblem.dll
+C:\Users\Kaltrina\Documents\GitHub\Artificial-Intelligence-Projects\SudokuProblem\bin\Debug\net9.0\SudokuProblem.pdb
+C:\Users\Kaltrina\Documents\GitHub\Artificial-Intelligence-Projects\SudokuProblem\obj\Debug\net9.0\SudokuProblem.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Kaltrina\Documents\GitHub\Artificial-Intelligence-Projects\SudokuProblem\obj\Debug\net9.0\SudokuProblem.AssemblyInfoInputs.cache
+C:\Users\Kaltrina\Documents\GitHub\Artificial-Intelligence-Projects\SudokuProblem\obj\Debug\net9.0\SudokuProblem.AssemblyInfo.cs
+C:\Users\Kaltrina\Documents\GitHub\Artificial-Intelligence-Projects\SudokuProblem\obj\Debug\net9.0\SudokuProblem.csproj.CoreCompileInputs.cache
+C:\Users\Kaltrina\Documents\GitHub\Artificial-Intelligence-Projects\SudokuProblem\obj\Debug\net9.0\SudokuProblem.sourcelink.json
+C:\Users\Kaltrina\Documents\GitHub\Artificial-Intelligence-Projects\SudokuProblem\obj\Debug\net9.0\SudokuProblem.dll
+C:\Users\Kaltrina\Documents\GitHub\Artificial-Intelligence-Projects\SudokuProblem\obj\Debug\net9.0\refint\SudokuProblem.dll
+C:\Users\Kaltrina\Documents\GitHub\Artificial-Intelligence-Projects\SudokuProblem\obj\Debug\net9.0\SudokuProblem.pdb
+C:\Users\Kaltrina\Documents\GitHub\Artificial-Intelligence-Projects\SudokuProblem\obj\Debug\net9.0\SudokuProblem.genruntimeconfig.cache
+C:\Users\Kaltrina\Documents\GitHub\Artificial-Intelligence-Projects\SudokuProblem\obj\Debug\net9.0\ref\SudokuProblem.dll
