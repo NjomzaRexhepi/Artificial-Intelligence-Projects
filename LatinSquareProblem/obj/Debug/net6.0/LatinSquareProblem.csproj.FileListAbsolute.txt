@@ -1,0 +1,15 @@
+C:\Users\Admin\Source\Repos\Artificial-Intelligence-Projects\LatinSquareProblem\bin\Debug\net6.0\LatinSquareProblem.exe
+C:\Users\Admin\Source\Repos\Artificial-Intelligence-Projects\LatinSquareProblem\bin\Debug\net6.0\LatinSquareProblem.deps.json
+C:\Users\Admin\Source\Repos\Artificial-Intelligence-Projects\LatinSquareProblem\bin\Debug\net6.0\LatinSquareProblem.runtimeconfig.json
+C:\Users\Admin\Source\Repos\Artificial-Intelligence-Projects\LatinSquareProblem\bin\Debug\net6.0\LatinSquareProblem.dll
+C:\Users\Admin\Source\Repos\Artificial-Intelligence-Projects\LatinSquareProblem\bin\Debug\net6.0\LatinSquareProblem.pdb
+C:\Users\Admin\Source\Repos\Artificial-Intelligence-Projects\LatinSquareProblem\obj\Debug\net6.0\LatinSquareProblem.csproj.AssemblyReference.cache
+C:\Users\Admin\Source\Repos\Artificial-Intelligence-Projects\LatinSquareProblem\obj\Debug\net6.0\LatinSquareProblem.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Admin\Source\Repos\Artificial-Intelligence-Projects\LatinSquareProblem\obj\Debug\net6.0\LatinSquareProblem.AssemblyInfoInputs.cache
+C:\Users\Admin\Source\Repos\Artificial-Intelligence-Projects\LatinSquareProblem\obj\Debug\net6.0\LatinSquareProblem.AssemblyInfo.cs
+C:\Users\Admin\Source\Repos\Artificial-Intelligence-Projects\LatinSquareProblem\obj\Debug\net6.0\LatinSquareProblem.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Source\Repos\Artificial-Intelligence-Projects\LatinSquareProblem\obj\Debug\net6.0\LatinSquareProblem.dll
+C:\Users\Admin\Source\Repos\Artificial-Intelligence-Projects\LatinSquareProblem\obj\Debug\net6.0\refint\LatinSquareProblem.dll
+C:\Users\Admin\Source\Repos\Artificial-Intelligence-Projects\LatinSquareProblem\obj\Debug\net6.0\LatinSquareProblem.pdb
+C:\Users\Admin\Source\Repos\Artificial-Intelligence-Projects\LatinSquareProblem\obj\Debug\net6.0\LatinSquareProblem.genruntimeconfig.cache
+C:\Users\Admin\Source\Repos\Artificial-Intelligence-Projects\LatinSquareProblem\obj\Debug\net6.0\ref\LatinSquareProblem.dll
