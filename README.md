@@ -23,7 +23,7 @@
 
 # Latin Square
 
-Projekti Latin Square është një aplikacion i zhvilluar në gjuhën programuese C# që gjeneron dhe validon kuadrate latine (Latin Squares). Një kuadrat latin është një matricë n×n, ku secili numër shfaqet saktësisht një herë në çdo rresht dhe kolonë. Ky projekt ofron mundësinë që përdoruesit të japin si hyrje vlerën n dhe të ndërveprojnë me funksionalitetet e tij për të mësuar më shumë rreth këtij koncepti matematikor.
+Latin Square është një aplikacion i zhvilluar në gjuhën programuese C# që gjeneron dhe validon kuadrate latine (Latin Squares). Një kuadrat latin është një matricë n×n, ku secili numër shfaqet saktësisht një herë në çdo rresht dhe kolonë. Ky projekt ofron mundësinë që përdoruesit të japin si hyrje vlerën n dhe të ndërveprojnë me funksionalitetet e tij për të mësuar më shumë rreth këtij koncepti matematikor.
 
 ## Karakteristikat
     1. Gjenerimi i Kuadrateve Latine
@@ -49,16 +49,11 @@ Projekti Latin Square është një aplikacion i zhvilluar në gjuhën programues
             Përdoruesi mund të zgjedhë mes opsioneve për të gjeneruar ose kontrolluar kuadratet latine.
 
 ## Instruksionet për Përdorim
-Kërkesat:
-    Duhet të keni të instaluar një mjedis për zhvillimin e projekteve C# (p.sh. Visual Studio).
+Duhet të keni të instaluar një mjedis për zhvillimin e projekteve C# (p.sh. Visual Studio).
 
-Shkarkoni Projektin:
-    Klononi projektin nga GitHub: git clone https://github.com/emri-i-projektit.git
+Klononi projektin nga GitHub: git clone [https://github.com/emri-i-projektit.git](https://github.com/NjomzaRexhepi/Artificial-Intelligence-Projects.git)
 
-Ndërtoni dhe Ekzekutoni Projektin:
-    Hapni projektin në Visual Studio.
-    Klikoni Run për të nisur aplikacionin.
-Përdorni Aplikacionin:
+Hapni projektin në Visual Studio. Klikoni Run për të nisur aplikacionin.
 
 Jepni vlerën n kur ju kërkohet.
 

@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Admin\\Source\\Repos\\Artificial-Intelligence-Projects\\SocialGolfersProblem\\SocialGolfersProblem\\SocialGolfersProblem.csproj",
+      "projectUniqueName": "C:\\Users\\Admin\\source\\repos\\Artificial-Intelligence-Projects\\SocialGolfersProblem\\SocialGolfersProblem\\SocialGolfersProblem.csproj",
       "projectName": "SocialGolfersProblem",
-      "projectPath": "C:\\Users\\Admin\\Source\\Repos\\Artificial-Intelligence-Projects\\SocialGolfersProblem\\SocialGolfersProblem\\SocialGolfersProblem.csproj",
+      "projectPath": "C:\\Users\\Admin\\source\\repos\\Artificial-Intelligence-Projects\\SocialGolfersProblem\\SocialGolfersProblem\\SocialGolfersProblem.csproj",
       "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Admin\\Source\\Repos\\Artificial-Intelligence-Projects\\SocialGolfersProblem\\SocialGolfersProblem\\obj\\",
+      "outputPath": "C:\\Users\\Admin\\source\\repos\\Artificial-Intelligence-Projects\\SocialGolfersProblem\\SocialGolfersProblem\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
