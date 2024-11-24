@@ -2,7 +2,7 @@
 
 ## Uninformed Search Techniques
 
-## Problems 
+## Problemet
 
 ### Social Golfers Problem
 
@@ -38,6 +38,26 @@ IDDFS është një përmirësim i DFS, i cili përdor një kufi për thellësin�
 #  Social Golfers Problem
 
 Golf Scheduler është një aplikacion i zhvilluar në gjuhën programuese C# që menaxhon dhe planifikon lojtarët e golfit në grupe për një periudhë të caktuar kohe. Ky projekt synon të optimizojë ndarjen e lojtarëve në grupe, duke siguruar që ata të luajnë me lojtarë të ndryshëm në çdo javë, duke minimizuar përsëritjen e lojtarëve që kanë luajtur së bashku më parë.
+
+ ## Formulimi i Social Golfers Problem 
+
+### Initial State:  
+  Në fillim, të gjithë lojtarët janë të papërcaktuar dhe asnjë javë nuk është planifikuar.
+
+### State Space:  
+  Përmban të gjitha mënyrat e mundshme për të ndarë lojtarët në grupe gjatë disa javëve, duke siguruar që asnjë lojtar të mos jetë në të njëjtin grup me një lojtar tjetër më shumë se një herë.
+
+### Actions:  
+  Veprimet përfshijnë formimin e grupeve të reja duke zgjedhur lojtarë që nuk kanë luajtur më parë së bashku.
+
+### Transition Model:  
+  Gjendja ndryshon kur një grup i ri formohet dhe shtohet në orar. Lojtarët në atë grup shënohen si ata që kanë luajtur së bashku për atë javë.
+
+### Goal Test:  
+  Qëllimi është të maksimizohet numri i javëve të planifikuara duke siguruar që asnjë lojtar të mos përsëritet në të njëjtin grup.  
+
+
+# Rezultatet e fituara 
 
 
 # Latin Square
@@ -89,3 +109,39 @@ Kuadrati Latin i Gjeneruar:
 Hyrje e Pavlefshme:
 Nëse n është më i vogël se 2, shfaqet mesazhi:
 Gabim: Madhësia e kuadratit duhet të jetë të paktën 2.
+
+# Sudoku
+
+Sudoku është një lojë shumë e njohur me enigma, ku lojtari duhet të plotësojë një rrjetë 9x9 me numra nga 1 deri në 9, në mënyrë që çdo rresht, kolonë dhe nën-rjetë 3x3 të mos ketë përsëritje të numrave. Niveli i vështirësisë varet nga sa qeliza janë të mbushura paraprakisht dhe teknikat që duhen përdorur për ta zgjidhur.
+
+## Nivelet
+
+### Easy
+Karakteristika:
+
+Sudoku-t e lehtë kanë zakonisht 35-45 qeliza të mbushura paraprakisht.
+Rrjedhimisht, zgjidhja kërkon vetëm teknika bazike.
+Numrat e plotësuar shpesh janë të shpërndarë në mënyrë të tillë që të lënë pak hapësirë për gabime ose konfuzion.
+
+![image](https://github.com/user-attachments/assets/0d79dbbd-850e-45a7-97bc-676e5477733f)
+
+
+### Medium
+Karakteristika:
+
+Ka 25-35 qeliza të mbushura paraprakisht.
+Zgjidhja kërkon teknika të avancuara bazike dhe logjikë më të thellë.
+Shpesh, disa qeliza nuk mund të plotësohen pa analizuar disa hapësira njëherazi.
+
+![image](https://github.com/user-attachments/assets/84422363-94b9-4281-9464-fa055983c565)
+
+### Hard
+Karakteristika:
+
+Ka vetëm 17-25 qeliza të mbushura paraprakisht, që është minimumi për një sudoku unik.
+Kërkon strategji të avancuara, ndonjëherë provë-gabim, dhe ndjekje të gjatë të arsyetimeve logjike.
+Lidhjet mes qelizave janë më komplekse, duke bërë që një gabim të ndikojë në shumë pjesë të rrjetës.
+
+![image](https://github.com/user-attachments/assets/765e8428-a1e2-4422-b5f9-bf5724beffb7)
+
+
