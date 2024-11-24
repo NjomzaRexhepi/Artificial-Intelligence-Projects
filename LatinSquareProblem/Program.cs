@@ -17,50 +17,44 @@ class LatinSquare
 
     public bool SolveSquare()
     {
-        return Backtrack(0, 0);
+        for (int depth = 1; depth <= n * n; depth++) // IDDFS: Increment depth
+        {
+            Console.WriteLine($"Trying depth limit: {depth}");
+            if (Backtrack(0, 0, depth, 0)) // Call backtracking with depth limit
+                return true;
+        }
+        return false; // No solution found within limits
     }
 
-    private bool Backtrack(int row, int col)
+    private bool Backtrack(int row, int col, int depthLimit, int currentDepth)
     {
+        if (currentDepth == depthLimit) return false; // Stop if depth limit is reached
         if (row == n) return true; // Base case: All rows are filled
 
         // Calculate the next cell
         int nextRow = col == n - 1 ? row + 1 : row;
         int nextCol = col == n - 1 ? 0 : col + 1;
 
-        // Create a random list of numbers to try
-        List<int> candidates = new List<int>();
+        // Try all valid numbers for the current cell
         for (int num = 1; num <= n; num++)
         {
             if (!rowUsed[row, num] && !colUsed[col, num])
-                candidates.Add(num);
+            {
+                // Place the number
+                square[row, col] = num;
+                rowUsed[row, num] = colUsed[col, num] = true;
+
+                // Recurse to the next cell
+                if (Backtrack(nextRow, nextCol, depthLimit, currentDepth + 1))
+                    return true;
+
+                // Undo placement
+                square[row, col] = 0;
+                rowUsed[row, num] = colUsed[col, num] = false;
+            }
         }
 
-        // Randomly shuffle the candidates
-        Random rng = new Random();
-        for (int i = candidates.Count - 1; i > 0; i--)
-        {
-            int j = rng.Next(i + 1);
-            (candidates[i], candidates[j]) = (candidates[j], candidates[i]);
-        }
-
-        // Try placing the numbers in a random order
-        foreach (var num in candidates)
-        {
-            // Place the number and mark it used
-            square[row, col] = num;
-            rowUsed[row, num] = colUsed[col, num] = true;
-
-            // Recurse with the next cell
-            if (Backtrack(nextRow, nextCol))
-                return true;
-
-            // Undo the placement if it didn't work
-            square[row, col] = 0;
-            rowUsed[row, num] = colUsed[col, num] = false;
-        }
-
-        return false; // No valid candidate found, backtrack
+        return false; // No valid number found for this cell, backtrack
     }
 
     public void PrintSquare()
