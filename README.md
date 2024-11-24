@@ -39,6 +39,26 @@ IDDFS është një përmirësim i DFS, i cili përdor një kufi për thellësin�
 
 Golf Scheduler është një aplikacion i zhvilluar në gjuhën programuese C# që menaxhon dhe planifikon lojtarët e golfit në grupe për një periudhë të caktuar kohe. Ky projekt synon të optimizojë ndarjen e lojtarëve në grupe, duke siguruar që ata të luajnë me lojtarë të ndryshëm në çdo javë, duke minimizuar përsëritjen e lojtarëve që kanë luajtur së bashku më parë.
 
+ ## Formulimi i Social Golfers Problem 
+
+### Initial State:  
+  Në fillim, të gjithë lojtarët janë të papërcaktuar dhe asnjë javë nuk është planifikuar.
+
+### State Space:  
+  Përmban të gjitha mënyrat e mundshme për të ndarë lojtarët në grupe gjatë disa javëve, duke siguruar që asnjë lojtar të mos jetë në të njëjtin grup me një lojtar tjetër më shumë se një herë.
+
+### Actions:  
+  Veprimet përfshijnë formimin e grupeve të reja duke zgjedhur lojtarë që nuk kanë luajtur më parë së bashku.
+
+### Transition Model:  
+  Gjendja ndryshon kur një grup i ri formohet dhe shtohet në orar. Lojtarët në atë grup shënohen si ata që kanë luajtur së bashku për atë javë.
+
+### Goal Test:  
+  Qëllimi është të maksimizohet numri i javëve të planifikuara duke siguruar që asnjë lojtar të mos përsëritet në të njëjtin grup.  
+
+
+# Rezultatet e fituara 
+
 
 # Latin Square
 
