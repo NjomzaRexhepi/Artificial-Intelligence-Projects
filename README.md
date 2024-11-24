@@ -68,11 +68,6 @@ Latin Square është një aplikacion i zhvilluar në gjuhën programuese C# që 
             Përdoruesi mund të zgjedhë mes opsioneve për të gjeneruar ose kontrolluar kuadratet latine.
 
 ## Instruksionet për Përdorim
-Duhet të keni të instaluar një mjedis për zhvillimin e projekteve C# (p.sh. Visual Studio).
-
-Klononi projektin nga GitHub: git clone [https://github.com/emri-i-projektit.git](https://github.com/NjomzaRexhepi/Artificial-Intelligence-Projects.git)
-
-Hapni projektin në Visual Studio. Klikoni Run për të nisur aplikacionin.
 
 Jepni vlerën n kur ju kërkohet.
 
