@@ -2,7 +2,7 @@
 
 ## Uninformed Search Techniques
 
-## Problems 
+## Problemet
 
 ### Social Golfers Problem
 
