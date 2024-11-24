@@ -90,13 +90,13 @@ Hyrje e Pavlefshme:
 Nëse n është më i vogël se 2, shfaqet mesazhi:
 Gabim: Madhësia e kuadratit duhet të jetë të paktën 2.
 
-#Sudoku
+# Sudoku
 
 Sudoku është një lojë shumë e njohur me enigma, ku lojtari duhet të plotësojë një rrjetë 9x9 me numra nga 1 deri në 9, në mënyrë që çdo rresht, kolonë dhe nën-rjetë 3x3 të mos ketë përsëritje të numrave. Niveli i vështirësisë varet nga sa qeliza janë të mbushura paraprakisht dhe teknikat që duhen përdorur për ta zgjidhur.
 
-##Nivelet
+## Nivelet
 
-###Easy
+### Easy
 Karakteristika:
 
 Sudoku-t e lehtë kanë zakonisht 35-45 qeliza të mbushura paraprakisht.
@@ -106,7 +106,7 @@ Numrat e plotësuar shpesh janë të shpërndarë në mënyrë të tillë që t�
 ![image](https://github.com/user-attachments/assets/0d79dbbd-850e-45a7-97bc-676e5477733f)
 
 
-###Medium
+### Medium
 Karakteristika:
 
 Ka 25-35 qeliza të mbushura paraprakisht.
@@ -115,7 +115,7 @@ Shpesh, disa qeliza nuk mund të plotësohen pa analizuar disa hapësira njëher
 
 ![image](https://github.com/user-attachments/assets/84422363-94b9-4281-9464-fa055983c565)
 
-###Hard
+### Hard
 Karakteristika:
 
 Ka vetëm 17-25 qeliza të mbushura paraprakisht, që është minimumi për një sudoku unik.
