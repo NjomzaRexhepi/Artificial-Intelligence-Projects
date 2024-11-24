@@ -19,7 +19,14 @@
     Description: A Latin square is an n x n grid filled with n different numbers, each appearing exactly once in every row and column. Given an input n, the program should print an n x n matrix composed of numbers from 1 to     n.
 
    Requirement: Iterative Deepening Depth First Search (IDDFS) and Backtracking.
+#  Social Golfers Problem
 
+Rezultatet e fituara
+
+![output1](https://github.com/user-attachments/assets/ba2a6a4b-c943-464e-9941-e63d3f2c8752)
+
+![output2](https://github.com/user-attachments/assets/08be3ee6-7a1e-4b66-882e-1fddf98acf66)
+![output3](https://github.com/user-attachments/assets/5000dbed-d355-489f-9a13-30e99ec11d8b)
 
 # Latin Square
 
