@@ -72,13 +72,10 @@ Latin Square është një aplikacion i zhvilluar në gjuhën programuese C# që 
     1. Gjenerimi i Kuadrateve Latine
             Gjeneron automatikisht kuadrate latine valide të madhësisë n×n.
             Siguron që secili numër shfaqet vetëm një herë në çdo rresht dhe kolonë.
-    2. Validimi
-            Kontrollon nëse një matricë e dhënë nga përdoruesi është kuadrat latin.
-            Verifikon unikësinë e elementeve në rreshta dhe kolona.
-    3. Input i Personalizuar
+    2. Input i Personalizuar
             Përdoruesi mund të japë hyrje manuale për matricën n×n dhe aplikacioni do të kryejë validimin e saj.
-    4. Trajtimi i Gabimeve
-            Jep mesazhe të sakta për raste kur hyrjet janë të pavlefshme ose kur matrica nuk përmbush rregullat e kuadratit latin.
+    3. Trajtimi i Gabimeve
+            Jep mesazhe të sakta për raste kur hyrjet janë të pavlefshme.
 
 ## Si Funksionon
     1. Gjenerimi i Kuadratit Latin
@@ -88,8 +85,6 @@ Latin Square është një aplikacion i zhvilluar në gjuhën programuese C# që 
             Përdoruesi fut një matricë n×n.
             Aplikacioni verifikon: Rreshtat kanë elemente unike. Kolonat kanë elemente unike.
             Jep rezultate përkatëse për validimin e matricës.
-    3. Ndërveprimi me Përdoruesin
-            Përdoruesi mund të zgjedhë mes opsioneve për të gjeneruar ose kontrolluar kuadratet latine.
 
 ## Instruksionet për Përdorim
 
@@ -97,22 +92,8 @@ Jepni vlerën n kur ju kërkohet.
 
 Shembull
 
-Hyrja:
+![image](https://github.com/user-attachments/assets/f20dd8b5-3a53-4ee7-813b-2c9c75961914)
 
-Vendosni madhësinë e kuadratit latin (n): 3
-
-Rezultati:
-
-Kuadrati Latin i Gjeneruar:
-```
-1 2 3
-3 1 2
-2 3 1
-```
-## Mesazhe të Gabimeve
-Hyrje e Pavlefshme:
-Nëse n është më i vogël se 2, shfaqet mesazhi:
-Gabim: Madhësia e kuadratit duhet të jetë të paktën 2.
 
 # Sudoku
 
