@@ -17,44 +17,39 @@ class LatinSquare
 
     public bool SolveSquare()
     {
-        for (int depth = 1; depth <= n * n; depth++) // IDDFS: Increment depth
+        for (int depth = 1; depth <= n * n; depth++)
         {
             Console.WriteLine($"Trying depth limit: {depth}");
-            if (Backtrack(0, 0, depth, 0)) // Call backtracking with depth limit
+            if (Backtrack(0, 0, depth, 0))
                 return true;
         }
-        return false; // No solution found within limits
+        return false;
     }
 
     private bool Backtrack(int row, int col, int depthLimit, int currentDepth)
     {
-        if (currentDepth == depthLimit) return false; // Stop if depth limit is reached
-        if (row == n) return true; // Base case: All rows are filled
+        if (currentDepth == depthLimit) return false;
+        if (row == n) return true;
 
-        // Calculate the next cell
         int nextRow = col == n - 1 ? row + 1 : row;
         int nextCol = col == n - 1 ? 0 : col + 1;
 
-        // Try all valid numbers for the current cell
         for (int num = 1; num <= n; num++)
         {
             if (!rowUsed[row, num] && !colUsed[col, num])
             {
-                // Place the number
                 square[row, col] = num;
                 rowUsed[row, num] = colUsed[col, num] = true;
 
-                // Recurse to the next cell
                 if (Backtrack(nextRow, nextCol, depthLimit, currentDepth + 1))
                     return true;
 
-                // Undo placement
                 square[row, col] = 0;
                 rowUsed[row, num] = colUsed[col, num] = false;
             }
         }
 
-        return false; // No valid number found for this cell, backtrack
+        return false;
     }
 
     public void PrintSquare()
@@ -88,7 +83,7 @@ class Program
             }
             else
             {
-                break; // Valid input
+                break;
             }
         }
 
