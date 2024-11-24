@@ -21,6 +21,16 @@ Kërkesa: Breadth First Search (BFS) dhe Backtracking.
 Përshkrimi: Një shesh Latin është një matricë n x n e mbushur me n numra të ndryshëm, secili duke u shfaqur pikërisht një herë në çdo rresht dhe kolonë. Dhenë një n si input, programi duhet të printojë një matricë n x n të përbërë nga numrat nga 1 deri në n.
 
 Kërkesa: Iterative Deepening Depth First Search (IDDFS) dhe Backtracking.
+
+# Algoritmet e përdorura 
+## BFS
+BFS është një algoritëm kërkimi që eksploron të gjithë nivelet e mundshme të një grafi ose një strukture të dhënash duke filluar nga një nyje burimore, pastaj duke vizituar të gjithë fëmijët (fqinjtë) e nyjeve në nivelin 1, pastaj në nivelin 2, dhe kështu me radhë.
+
+## DFS
+DLS është një modifikim i DFS (Depth-First Search) që kufizon thellësinë e kërkimit. Në vend që të kërkojë në mënyrë të pakufizuar (si në DFS), DLS ndalon kërkimin kur arrin një thellësi të caktuar.
+
+## Backtracking 
+Backtracking është një teknikë kërkimi që përdor një qasje të provë-dhe-gabim për të eksploruar mundësitë e mundshme. Pasi të arrini një situatë që nuk mund të zgjidhet (p.sh. duke kaluar përmes një rruge që çon në një kundërshtim), algoritmi kthehet pas dhe provo të tjera mundësi.
    
 #  Social Golfers Problem
 
