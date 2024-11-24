@@ -59,6 +59,10 @@ Golf Scheduler është një aplikacion i zhvilluar në gjuhën programuese C# q�
 
 # Rezultatet e fituara 
 
+![Screenshot 2024-11-24 153255](https://github.com/user-attachments/assets/96a66768-15e2-40d1-b77b-49278b206619)
+
+![Screenshot 2024-11-24 153312 (1)](https://github.com/user-attachments/assets/8ed0d3a9-bc95-48f5-96c0-e52ad0dde534)
+
 
 # Latin Square
 
