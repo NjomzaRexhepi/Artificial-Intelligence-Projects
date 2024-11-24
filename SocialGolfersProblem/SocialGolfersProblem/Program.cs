@@ -12,7 +12,7 @@ namespace SocialGolfersProblem
         {
             int numPlayers = 32;
             int groupSize = 4;
-            int depthLimit = 100;
+            int depthLimit = 200;
 
             var scheduler = new GolfScheduler(numPlayers, groupSize);
             int maxWeeks = scheduler.CreateMaxSchedule(depthLimit);
