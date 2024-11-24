@@ -21,6 +21,21 @@
    Requirement: Iterative Deepening Depth First Search (IDDFS) and Backtracking.
 #  Social Golfers Problem
 
+Golf Scheduler është një aplikacion i zhvilluar në gjuhën programuese C# që menaxhon dhe planifikon lojtarët e golfit në grupe për një periudhë të caktuar kohe. Ky projekt synon të optimizojë ndarjen e lojtarëve në grupe, duke siguruar që ata të luajnë me lojtarë të ndryshëm në çdo javë, duke minimizuar përsëritjen e lojtarëve që kanë luajtur së bashku më parë.
+
+Planifikimi i Grupi
+
+Aplikacioni ndan një numër të caktuar lojtarësh në grupe të caktuar  4 lojtarë në grup për secilën javë.
+Siguron që çdo grup të përbëhet nga lojtarë të cilët nuk kanë luajtur së bashku më parë, për të rritur diversitetin dhe përvojën sociale të lojtarëve.
+
+Validimi i Grupit
+
+Para se të formohen grupet, aplikacioni kontrollon nëse grupi i propozuar është valid, duke siguruar që lojtarët nuk kanë luajtur së bashku më parë.
+
+Krijimi i Planit Maksimal
+
+Aplikacioni përpiqet të krijojë një planifikim maksimal të javëve, duke vazhduar derisa të mos ketë më mundësi për të formuar grupe të reja.
+
 Rezultatet e fituara
 
 ![output1](https://github.com/user-attachments/assets/ba2a6a4b-c943-464e-9941-e63d3f2c8752)
