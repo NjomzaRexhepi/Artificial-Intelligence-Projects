@@ -41,15 +41,7 @@ namespace SocialGolfersProblem
                     availablePlayers.Add(i);
 
                 int n = availablePlayers.Count;
-                //while (n > 1)
-                //{
-                //    n--;
-                //    int k = rand.Next(n + 1);
-                //    int value = availablePlayers[k];
-                //    availablePlayers[k] = availablePlayers[n];
-                //    availablePlayers[n] = value;
-                //}
-                // Shuffle using Fisher-Yates Shuffle
+              
                 for (int i = availablePlayers.Count - 1; i > 0; i--)
                 {
                     int j = rand.Next(i + 1);
@@ -86,16 +78,17 @@ namespace SocialGolfersProblem
         private bool ScheduleGroup(int groupIndex, List<int> availablePlayers, List<List<int>> weekGroups, int depthLimit, int currentDepth)
         {
             if (groupIndex == numGroups)
-                return true;
+                return true;  
 
             if (currentDepth >= depthLimit)
-                return false;
+                return false; 
 
-            if ((DateTime.UtcNow - this.starttime).TotalHours > 5)
+            if ((DateTime.UtcNow - this.starttime).TotalHours > 24)
             {
-                return false;
+                return false; 
             }
 
+       
             var sortedPlayers = availablePlayers.OrderBy(player => playedTogether.Count(pair => pair.Item1 == player || pair.Item2 == player)).ToList();
 
             return TryPlayers(sortedPlayers, new List<int>(), groupSize, group =>
@@ -105,7 +98,13 @@ namespace SocialGolfersProblem
                     weekGroups[groupIndex] = group;
                     MarkPairs(group);
 
-                    if (ScheduleGroup(groupIndex + 1, availablePlayers, weekGroups, depthLimit, currentDepth + 1))
+                    var remainingPlayers = new List<int>(availablePlayers);
+                    foreach (var player in group)
+                    {
+                        remainingPlayers.Remove(player);  
+                    }
+
+                    if (ScheduleGroup(groupIndex + 1, remainingPlayers, weekGroups, depthLimit, currentDepth + 1))
                         return true;
 
                     UnmarkPairs(group);
@@ -113,7 +112,7 @@ namespace SocialGolfersProblem
                 return false;
             });
         }
-     
+
 
         private bool TryPlayers(List<int> players, List<int> currentGroup, int remaining, Func<List<int>, bool> callback)
         {

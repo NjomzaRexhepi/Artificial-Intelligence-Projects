@@ -1,15 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "zQVEBKP6i6gCAPEbUGBUvMKt6wa8RKvSdM7nOxkcTnBlRRotoSWe1NkULYCndTnsRrrXPfMlzmmMB3yemgEvMA==",
+  "dgSpecHash": "oWUFSlG2d2CNTo+xqClSv34CNd/qgWVs/6A/Vd1DgFbgGVVvY7b1EfzPCIAITUJS5PtIXxx+VehMea1VinVUjw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Admin\\source\\repos\\Artificial-Intelligence-Projects\\LatinSquareProblem\\LatinSquareProblem.csproj",
+  "projectFilePath": "C:\\Users\\HP\\Desktop\\SocialGolfersProblem\\Artificial-Intelligence-Projects\\LatinSquareProblem\\LatinSquareProblem.csproj",
   "expectedPackageFiles": [],
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problem reading the cache file C:\\Users\\Admin\\source\\repos\\Artificial-Intelligence-Projects\\LatinSquareProblem\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  "logs": []
 }
