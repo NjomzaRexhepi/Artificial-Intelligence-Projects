@@ -17,36 +17,40 @@ class LatinSquare
 
     public bool SolveSquare()
     {
-        for (int depth = 1; depth <= n * n; depth++)
-        {
-            Console.WriteLine($"Trying depth limit: {depth}");
-            if (Backtrack(0, 0, depth, 0))
-                return true;
-        }
-        return false;
+        return Backtrack(0, 0);
     }
 
-    private bool Backtrack(int row, int col, int depthLimit, int currentDepth)
+    private bool Backtrack(int row, int col)
     {
-        if (currentDepth == depthLimit) return false;
         if (row == n) return true;
 
         int nextRow = col == n - 1 ? row + 1 : row;
         int nextCol = col == n - 1 ? 0 : col + 1;
 
+        List<int> candidates = new List<int>();
         for (int num = 1; num <= n; num++)
         {
             if (!rowUsed[row, num] && !colUsed[col, num])
-            {
-                square[row, col] = num;
-                rowUsed[row, num] = colUsed[col, num] = true;
+                candidates.Add(num);
+        }
 
-                if (Backtrack(nextRow, nextCol, depthLimit, currentDepth + 1))
-                    return true;
+        Random rng = new Random();
+        for (int i = candidates.Count - 1; i > 0; i--)
+        {
+            int j = rng.Next(i + 1);
+            (candidates[i], candidates[j]) = (candidates[j], candidates[i]);
+        }
 
-                square[row, col] = 0;
-                rowUsed[row, num] = colUsed[col, num] = false;
-            }
+        foreach (var num in candidates)
+        {
+            square[row, col] = num;
+            rowUsed[row, num] = colUsed[col, num] = true;
+
+            if (Backtrack(nextRow, nextCol))
+                return true;
+
+            square[row, col] = 0;
+            rowUsed[row, num] = colUsed[col, num] = false;
         }
 
         return false;
@@ -100,3 +104,4 @@ class Program
         }
     }
 }
+
