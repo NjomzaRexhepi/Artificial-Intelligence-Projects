@@ -4,21 +4,24 @@
 
 ## Problems 
 
-1. Social Golfers Problem 
+### Social Golfers Problem
 
-    Description: This problem involves 32 golfers who play in groups of 4, once a week. The goal is to schedule the games in such a way that no two players play together more than once in the same group.
+Përshkrimi: Ky problem përfshin 32 golferë që luajnë në grupe prej 4 personash, një herë në javë. Qëllimi është të planifikohen lojërat në një mënyrë që asnjë dy lojtarë të mos luajnë së bashku më shumë se një herë në të njëjtin grup.
 
-    Requirement: Depth First Search (DFS), Depth Limited Search, and Backtracking.
-3. Sudoku Solver
+Kërkesa: Depth First Search (DFS), Depth Limited Search, dhe Backtracking.
 
-    Description: This program solves a Sudoku puzzle, covering three different difficulty levels: Easy, Medium, and Hard.
+### Sudoku Solver
 
-    Requirement: Breadth First Search (BFS) and Backtracking.
-5. Latin Square
+Përshkrimi: Ky program zgjidh një puzzle të Sudoku-s, duke përfshirë tre nivele të ndryshme të vështirësisë: E Lehtë, Mesatare, dhe E Vështirë.
 
-    Description: A Latin square is an n x n grid filled with n different numbers, each appearing exactly once in every row and column. Given an input n, the program should print an n x n matrix composed of numbers from 1 to     n.
+Kërkesa: Breadth First Search (BFS) dhe Backtracking.
 
-   Requirement: Iterative Deepening Depth First Search (IDDFS) and Backtracking.
+### Latin Square
+
+Përshkrimi: Një shesh Latin është një matricë n x n e mbushur me n numra të ndryshëm, secili duke u shfaqur pikërisht një herë në çdo rresht dhe kolonë. Dhenë një n si input, programi duhet të printojë një matricë n x n të përbërë nga numrat nga 1 deri në n.
+
+Kërkesa: Iterative Deepening Depth First Search (IDDFS) dhe Backtracking.
+   
 #  Social Golfers Problem
 
 Golf Scheduler është një aplikacion i zhvilluar në gjuhën programuese C# që menaxhon dhe planifikon lojtarët e golfit në grupe për një periudhë të caktuar kohe. Ky projekt synon të optimizojë ndarjen e lojtarëve në grupe, duke siguruar që ata të luajnë me lojtarë të ndryshëm në çdo javë, duke minimizuar përsëritjen e lojtarëve që kanë luajtur së bashku më parë.
