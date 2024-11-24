@@ -31,6 +31,9 @@ DLS është një modifikim i DFS (Depth-First Search) që kufizon thellësinë e
 
 ## Backtracking 
 Backtracking është një teknikë kërkimi që përdor një qasje të provë-dhe-gabim për të eksploruar mundësitë e mundshme. Pasi të arrini një situatë që nuk mund të zgjidhet (p.sh. duke kaluar përmes një rruge që çon në një kundërshtim), algoritmi kthehet pas dhe provo të tjera mundësi.
+
+## IDDFS 
+IDDFS është një përmirësim i DFS, i cili përdor një kufi për thellësinë që rritet në çdo iteracion. Ndryshe nga DFS, i cili mund të shkojë pafundësisht në thellësi, IDDFS kontrollon thellësinë e kërkimit nëpërmjet disa iteraçionesh të shkurtra me thellësi të kufizuar, duke përparuar çdo herë duke rritur kufirin.
    
 #  Social Golfers Problem
 
