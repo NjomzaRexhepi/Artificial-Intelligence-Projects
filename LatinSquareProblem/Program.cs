@@ -22,13 +22,11 @@ class LatinSquare
 
     private bool Backtrack(int row, int col)
     {
-        if (row == n) return true; // Base case: All rows are filled
+        if (row == n) return true;
 
-        // Calculate the next cell
         int nextRow = col == n - 1 ? row + 1 : row;
         int nextCol = col == n - 1 ? 0 : col + 1;
 
-        // Create a random list of numbers to try
         List<int> candidates = new List<int>();
         for (int num = 1; num <= n; num++)
         {
@@ -36,7 +34,6 @@ class LatinSquare
                 candidates.Add(num);
         }
 
-        // Randomly shuffle the candidates
         Random rng = new Random();
         for (int i = candidates.Count - 1; i > 0; i--)
         {
@@ -44,23 +41,19 @@ class LatinSquare
             (candidates[i], candidates[j]) = (candidates[j], candidates[i]);
         }
 
-        // Try placing the numbers in a random order
         foreach (var num in candidates)
         {
-            // Place the number and mark it used
             square[row, col] = num;
             rowUsed[row, num] = colUsed[col, num] = true;
 
-            // Recurse with the next cell
             if (Backtrack(nextRow, nextCol))
                 return true;
 
-            // Undo the placement if it didn't work
             square[row, col] = 0;
             rowUsed[row, num] = colUsed[col, num] = false;
         }
 
-        return false; // No valid candidate found, backtrack
+        return false;
     }
 
     public void PrintSquare()
@@ -94,7 +87,7 @@ class Program
             }
             else
             {
-                break; // Valid input
+                break;
             }
         }
 
@@ -111,3 +104,4 @@ class Program
         }
     }
 }
+
